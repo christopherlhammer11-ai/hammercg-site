@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Hammer Consulting Group - Cannabis Industry Insights</title>
+    <meta name="description" content="Expert insights on cannabis operations, regulation, extraction, manufacturing, and global markets. Industry perspectives from 28+ year veteran operator Christopher L. Hammer.">
+    <meta property="og:title" content="Blog | Hammer Consulting Group">
+    <meta property="og:description" content="Cannabis industry insights, regulatory analysis, and operational guidance from a 28-year veteran.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hammercg.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="canonical" content="https://hammercg.com/blog.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero { background: linear-gradient(165deg, var(--green-900) 0%, #0a1f14 40%, #071510 100%); padding: 6rem 0; }
+        .blog-hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: var(--white); margin-bottom: 1.5rem; }
+        .blog-hero p { color: var(--gray-400); font-size: 1.1rem; max-width: 600px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
+        .blog-card { background: var(--white); border-radius: 12px; padding: 2rem; border: 1px solid var(--gray-200); transition: var(--transition); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); border-color: var(--green-300); }
+        .blog-card-date { font-size: 0.8rem; color: var(--green-600); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+        .blog-card-title { font-family: var(--font-heading); font-size: 1.4rem; color: var(--green-900); margin-bottom: 0.75rem; line-height: 1.2; }
+        .blog-card-excerpt { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+        .blog-card-meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--gray-500); }
+        .blog-card-category { display: inline-block; background: var(--green-100); color: var(--green-700); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 1rem; width: fit-content; }
+        .blog-card:hover .blog-card-title { color: var(--green-700); }
+        .blog-nav { text-align: center; margin-top: 3rem; }
+        .back-home { display: inline-block; color: var(--green-700); text-decoration: none; font-weight: 500; transition: var(--transition); }
+        .back-home:hover { color: var(--green-900); }
+        @media (max-width: 1024px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-hero { padding: 4rem 0; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Hammer Consulting Group Blog",
+        "description": "Expert cannabis industry insights and analysis",
+        "url": "https://hammercg.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Hammer Consulting Group"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- LANGUAGE TOGGLE (floating) -->
+    <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang-select="en">EN</button>
+        <button class="lang-btn" data-lang-select="pt">PT</button>
+    </div>
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="./" class="logo">
+                <span class="logo-hammer">HAMMER</span>
+                <span class="logo-divider"></span>
+                <span class="logo-sub">CONSULTING GROUP</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./#about" data-i18n="nav_about2">About</a></li>
+                <li><a href="./#proof" data-i18n="nav_track2">Track Record</a></li>
+                <li class="nav-dropdown">
+                    <a href="./#services" data-i18n="nav_services2">Services</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="services/cultivation-field-ops.html">Cultivation & Field Ops</a>
+                        <a href="services/extraction-manufacturing.html">Extraction & Manufacturing</a>
+                        <a href="services/supply-chain-logistics.html">Supply Chain & Logistics</a>
+                        <a href="services/deal-structure-commercial.html">Deal Structure & Commercial</a>
+                        <a href="services/technology-ai-automation.html">Technology & AI</a>
+                    </div>
+                </li>
+                <li><a href="./#markets" data-i18n="nav_markets2">Markets</a></li>
+                <li><a href="./#leadership" data-i18n="nav_leadership2">Leadership</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="./#contact" class="nav-cta" data-i18n="nav_cta2">Let's Talk</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 data-i18n="blog_hero_title">Latest Insights</h1>
+            <p data-i18n="blog_hero_sub">Expert analysis on cannabis operations, regulatory strategy, and global markets from a 28+ year industry operator.</p>
+        </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="container" style="padding: 4rem 0;">
+        <div class="blog-grid">
+
+            <!-- NEW HOW-TO: Grow Room Setup -->
+            <a href="blog/how-to-set-up-a-grow-room.html" class="blog-card">
+                <div class="blog-card-date">April 13, 2026</div>
+                <h2 class="blog-card-title" data-i18n="hta_title">How to Set Up a Grow Room: From Empty Space to First Harvest</h2>
+                <p class="blog-card-excerpt" data-i18n="hta_excerpt">A practical guide to designing and building an indoor grow room — layout, lights, HVAC, fertigation, sensors, and the mistakes that cost money.</p>
+                <div class="blog-card-meta">
+                    <span data-i18n="hta_read">14 min read</span>
+                    <span data-i18n="hta_cat">Cultivation</span>
+                </div>
+                <span class="blog-card-category" data-i18n="hta_cat">Cultivation</span>
+            </a>
+
+            <!-- NEW HOW-TO: Crude Food-Grade Extraction -->
+            <a href="blog/how-to-do-crude-food-grade-extraction.html" class="blog-card">
+                <div class="blog-card-date">April 13, 2026</div>
+                <h2 class="blog-card-title" data-i18n="htb_title">How to Do Crude Cannabis Extraction for Food-Grade Extract</h2>
+                <p class="blog-card-excerpt" data-i18n="htb_excerpt">A step-by-step walkthrough of food-grade crude extraction — solvent selection, process parameters, solvent removal, and compliance requirements for ingestible ingredients.</p>
+                <div class="blog-card-meta">
+                    <span data-i18n="htb_read">13 min read</span>
+                    <span data-i18n="htb_cat">Extraction</span>
+                </div>
+                <span class="blog-card-category" data-i18n="htb_cat">Extraction</span>
+            </a>
+
+            <!-- NEW HOW-TO: Refinement -->
+            <a href="blog/how-to-refine-cannabis-extract.html" class="blog-card">
+                <div class="blog-card-date">April 13, 2026</div>
+                <h2 class="blog-card-title" data-i18n="htc_title">How to Refine Cannabis Extract: Winterization, Distillation, and Crystallization</h2>
+                <p class="blog-card-excerpt" data-i18n="htc_excerpt">The refinement pipeline that turns crude extract into distillate and crystalline active ingredients — the chemistry, the equipment, and the control points.</p>
+                <div class="blog-card-meta">
+                    <span data-i18n="htc_read">15 min read</span>
+                    <span data-i18n="htc_cat">Extraction</span>
+                </div>
+                <span class="blog-card-category" data-i18n="htc_cat">Extraction</span>
+            </a>
+
+            <!-- NEW HOW-TO: Product Formulation -->
+            <a href="blog/how-to-formulate-cannabis-products.html" class="blog-card">
+                <div class="blog-card-date">April 13, 2026</div>
+                <h2 class="blog-card-title" data-i18n="htd_title">How to Formulate Cannabis Products: From Active to Finished SKU</h2>
+                <p class="blog-card-excerpt" data-i18n="htd_excerpt">The fundamentals of product formulation — dosing, solubility, stability, delivery base, and what actually matters when you move from extract to shelf-ready product.</p>
+                <div class="blog-card-meta">
+                    <span data-i18n="htd_read">13 min read</span>
+                    <span data-i18n="htd_cat">Manufacturing</span>
+                </div>
+                <span class="blog-card-category" data-i18n="htd_cat">Manufacturing</span>
+            </a>
+            <!-- Article: Fresh Frozen vs Biomass -->
+            <a href="blog/fresh-frozen-vs-biomass.html" class="blog-card">
+                <div class="blog-card-date">April 11, 2026</div>
+                <h2 class="blog-card-title" data-i18n="ba_title">Fresh Frozen vs Biomass: What Actually Makes More Money?</h2>
+                <p class="blog-card-excerpt" data-i18n="ba_excerpt">Compare fresh frozen and biomass economics in cannabis cultivation—yield, buyer demand, logistics, cold-chain risk, and margin potential for each harvest strategy.</p>
+                <div class="blog-card-meta">
+                    <span>8 min read</span>
+                    <span>Cultivation</span>
+                </div>
+                <span class="blog-card-category" data-i18n="ba_cat">Cultivation</span>
+            </a>
+
+            <!-- Article: Outdoor vs Greenhouse vs Indoor -->
+            <a href="blog/outdoor-vs-greenhouse-vs-indoor-cannabis.html" class="blog-card">
+                <div class="blog-card-date">April 11, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bb_title">Outdoor vs Greenhouse vs Indoor Cannabis: Real Cost Comparison</h2>
+                <p class="blog-card-excerpt" data-i18n="bb_excerpt">A practical breakdown of outdoor, greenhouse, and indoor cultivation by cost, yield, quality, scalability, and market positioning. No ego—just math.</p>
+                <div class="blog-card-meta">
+                    <span>9 min read</span>
+                    <span>Cultivation</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bb_cat">Cultivation</span>
+            </a>
+
+            <!-- Article: How Cannabis Distribution Actually Works -->
+            <a href="blog/how-cannabis-distribution-actually-works.html" class="blog-card">
+                <div class="blog-card-date">April 11, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bc_title">How Cannabis Distribution Actually Works</h2>
+                <p class="blog-card-excerpt" data-i18n="bc_excerpt">Distribution is not just trucking and paperwork. Understand compliance, logistics, storage, retail access, fees, and the operational traps that hurt brands.</p>
+                <div class="blog-card-meta">
+                    <span>8 min read</span>
+                    <span>Operations</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bc_cat">Operations</span>
+            </a>
+
+            <!-- Article: Cannabis Licensing & Compliance -->
+            <a href="blog/cannabis-licensing-compliance-what-actually-matters.html" class="blog-card">
+                <div class="blog-card-date">April 11, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bd_title">Cannabis Licensing & Compliance: What Actually Matters</h2>
+                <p class="blog-card-excerpt">Licensing gets you in the door. Compliance keeps you alive. Documentation, inventory control, testing workflow, and the systems that keep operators running.</p>
+                <div class="blog-card-meta">
+                    <span>8 min read</span>
+                    <span>Compliance</span>
+                </div>
+                <span class="blog-card-category">Compliance</span>
+            </a>
+
+            <!-- Article: Science of Extraction Methods -->
+            <a href="blog/science-of-extraction-methods.html" class="blog-card">
+                <div class="blog-card-date">April 11, 2026</div>
+                <h2 class="blog-card-title" data-i18n="be_title">The Science of Extraction: CO2, Ethanol, Hydrocarbon, Broad-Spectrum vs Isolate</h2>
+                <p class="blog-card-excerpt">Different methods produce different outputs. CO2, ethanol, hydrocarbon processing, plus the real differences between broad-spectrum and isolate.</p>
+                <div class="blog-card-meta">
+                    <span>9 min read</span>
+                    <span>Manufacturing</span>
+                </div>
+                <span class="blog-card-category">Manufacturing</span>
+            </a>
+
+            <!-- Article: From Extract to Shelf -->
+            <a href="blog/from-extract-to-shelf-cpg-manufacturing-formulations.html" class="blog-card">
+                <div class="blog-card-date">April 11, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bf_title">From Extract to Shelf: CPG Manufacturing & Formulations</h2>
+                <p class="blog-card-excerpt">Having oil in a drum is not the same as having a scalable product line. Formulation, dosing, cGMP, packaging, and the path to velocity.</p>
+                <div class="blog-card-meta">
+                    <span>9 min read</span>
+                    <span>Manufacturing</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bf_cat">Manufacturing</span>
+            </a>
+
+            <!-- Article: Offtake Agreements -->
+            <a href="blog/how-to-secure-offtake-agreements-before-you-plant.html" class="blog-card">
+                <div class="blog-card-date">April 11, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bg_title">How to Secure Offtake Agreements Before You Plant</h2>
+                <p class="blog-card-excerpt">Plant first, find buyers later is a fantastic strategy if your real business model is stress. Here's how smart operators align demand before capital is committed.</p>
+                <div class="blog-card-meta">
+                    <span>8 min read</span>
+                    <span>Commercial</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bg_cat">Commercial</span>
+            </a>
+
+            <!-- Article 1 -->
+            <a href="blog/cannabis-law-updates-2026.html" class="blog-card">
+                <div class="blog-card-date">March 28, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bh_title">Cannabis Law Updates 2026: What Operators Need to Know</h2>
+                <p class="blog-card-excerpt">DEA rescheduling progress, SAFER Act banking reform, ANVISA expansion in Brazil, EU Novel Food developments, Japan policy shifts, and what it means for your operation.</p>
+                <div class="blog-card-meta">
+                    <span>9 min read</span>
+                    <span>Regulatory</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bh_cat">Regulatory</span>
+            </a>
+
+            <!-- Article 2 -->
+            <a href="blog/history-of-cannabis-prohibition.html" class="blog-card">
+                <div class="blog-card-date">March 15, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bi_title">The History of Cannabis Prohibition: How We Got Here</h2>
+                <p class="blog-card-excerpt">Explore the political origins of cannabis prohibition—from Harry Anslinger's FBN campaigns through Nixon's Controlled Substances Act to modern reform movements reshaping global policy.</p>
+                <div class="blog-card-meta">
+                    <span>7 min read</span>
+                    <span>History</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bi_cat">History</span>
+            </a>
+
+            <!-- Article 3 -->
+            <a href="blog/cannabis-through-the-ages.html" class="blog-card">
+                <div class="blog-card-date">February 28, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bj_title">Cannabis Through the Ages: 10,000 Years of Human Use</h2>
+                <p class="blog-card-excerpt">Trace cannabis through ancient China, Egypt, India, the Islamic Golden Age, colonial America, and industrial pharmaceutical use—understanding why legalization is inevitable.</p>
+                <div class="blog-card-meta">
+                    <span>8 min read</span>
+                    <span>History</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bj_cat">History</span>
+            </a>
+
+            <!-- Article 4 -->
+            <a href="blog/understanding-cannabis-phenotypes.html" class="blog-card">
+                <div class="blog-card-date">February 10, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bk_title">Understanding Cannabis Phenotypes: A Grower's Guide to Genetics</h2>
+                <p class="blog-card-excerpt">Master genotype vs phenotype, the myths around indica/sativa classification, terpene profiles, pheno-hunting strategies, and breeding for stability at commercial scale.</p>
+                <div class="blog-card-meta">
+                    <span>9 min read</span>
+                    <span>Cultivation</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bk_cat">Cultivation</span>
+            </a>
+
+            <!-- Article 5 -->
+            <a href="blog/science-of-extraction.html" class="blog-card">
+                <div class="blog-card-date">January 25, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bl_title">The Science of Cannabis Extraction: Methods, Innovation & Quality</h2>
+                <p class="blog-card-excerpt">Deep dive into CO2 supercritical, ethanol, and hydrocarbon extraction. Explore winterization, distillation, chromatography innovation, quality control, and method selection for your operation.</p>
+                <div class="blog-card-meta">
+                    <span>10 min read</span>
+                    <span>Manufacturing</span>
+                </div>
+                <span class="blog-card-category">Manufacturing</span>
+            </a>
+
+            <!-- Article 6 -->
+            <a href="blog/cpg-manufacturing-formulations.html" class="blog-card">
+                <div class="blog-card-date">January 10, 2026</div>
+                <h2 class="blog-card-title" data-i18n="bm_title">From Extract to Shelf: Cannabis CPG Manufacturing & Formulations</h2>
+                <p class="blog-card-excerpt">Pharmaceutical-grade manufacturing: cGMP compliance, ISO 9001 standards, product formulations (tinctures, softgels, gummies, topicals), bioavailability science, and global regulatory pathways.</p>
+                <div class="blog-card-meta">
+                    <span>11 min read</span>
+                    <span>Manufacturing</span>
+                </div>
+                <span class="blog-card-category" data-i18n="bm_cat">Manufacturing</span>
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="blog-nav">
+            <a href="./" class="back-home" data-i18n="blog_back_home">← Back to Home</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">HAMMER <span class="footer-divider"></span> CONSULTING GROUP</div>
+                    <p>Strategic cannabis operations and regulatory consulting. Built by operators who've done the work.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_services_h">Services</h4>
+                    <a href="services/cultivation-field-ops.html">Cultivation & Field Ops</a>
+                    <a href="services/extraction-manufacturing.html">Extraction & Manufacturing</a>
+                    <a href="services/supply-chain-logistics.html">Supply Chain & Logistics</a>
+                    <a href="services/deal-structure-commercial.html">Deal Structure & Commercial</a>
+                    <a href="services/technology-ai-automation.html">Technology & AI</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_markets_h">Markets</h4>
+                    <a href="./#markets" data-i18n="footer_brazil">Brazil / ANVISA</a>
+                    <a href="./#markets" data-i18n="footer_japan">Japan / MHLW</a>
+                    <a href="./#markets" data-i18n="footer_eu">European Union</a>
+                    <a href="./#markets" data-i18n="footer_paraguay">Paraguay</a>
+                    <a href="./#markets" data-i18n="footer_korea">South Korea</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_company_h">Company</h4>
+                    <a href="./#leadership" data-i18n="nav_leadership2">Leadership</a>
+                    <a href="./#about" data-i18n="nav_about2">About</a>
+                    <a href="./#contact" data-i18n="footer_contact_l">Contact</a>
+                    <a href="https://hammerlockai.com" target="_blank" rel="noopener noreferrer">HammerLock AI</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hammer Consulting Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
