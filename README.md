@@ -1,138 +1,51 @@
 # Hammer Consulting Group Website
 
-A static HTML/CSS/JavaScript website for Hammer Consulting Group, a strategic cannabis consulting firm specializing in operations, regulatory compliance, and international market expansion.
+**Static website for Hammer Consulting Group.** This site presents Christopher Hammer's cannabis operations, extraction, manufacturing, regulatory strategy, and international market-entry consulting work.
+
+**Live site:** [hammercg.com](https://hammercg.com)
+
+## What It Shows
+
+- Cannabis operations and consulting positioning
+- Service pages for cultivation, extraction, supply chain, deal structure, and technology/AI automation
+- Blog library covering cannabis production, extraction, regulations, and commercial strategy
+- English / Portuguese-Brazilian language support
+- Static Vercel-ready site architecture
+
+## Why It Matters
+
+This repo is separate from the AI portfolio. It shows the operator/business side of the work: regulated markets, manufacturing, supply chain, international expansion, and practical consulting services.
 
 ## Project Structure
 
 ```
-hammercg-site/
-├── index.html              # Landing page with all main sections
-├── blog.html               # Blog listing page
-├── thank-you.html          # Form submission confirmation page
-├── styles.css              # Global styles and responsive design
-├── script.js               # JavaScript for interactivity
-├── i18n.js                 # Internationalization (English/Portuguese-BR)
-├── blog/                   # Blog post articles
-│   ├── fresh-frozen-vs-biomass.html
-│   ├── outdoor-vs-greenhouse-vs-indoor-cannabis.html
-│   └── ... (17 total blog posts)
-├── services/               # Service detail pages
-│   ├── cultivation-field-ops.html
-│   ├── extraction-manufacturing.html
-│   ├── supply-chain-logistics.html
-│   ├── deal-structure-commercial.html
-│   └── technology-ai-automation.html
-├── favicon.svg             # Site favicon (SVG)
-├── favicon.png             # Site favicon (PNG)
-├── .gitignore              # Git ignore rules
-└── README.md               # This file
+index.html              # Main landing page
+blog.html               # Blog listing page
+blog/                   # Cannabis operations and education articles
+services/               # Service detail pages
+styles.css              # Global styling
+script.js               # UI behavior
+i18n.js                 # English / Portuguese-BR translations
+thank-you.html          # Contact form confirmation
 ```
 
-## Features
+## Local Development
 
-- **Responsive Design**: Mobile-first approach with breakpoints for 1024px, 768px, and 480px
-- **Internationalization**: Full English and Portuguese-Brazilian support via i18n.js
-- **Smooth Scrolling**: Anchor link navigation with fixed nav offset
-- **Scroll Animations**: Intersection Observer API for fade-in effects
-- **Stat Animations**: Number counter animations on scroll
-- **Mobile Navigation**: Hamburger menu with dropdown support
-- **Form Integration**: FormSubmit.co for contact form handling
-- **Schema.org SEO**: JSON-LD structured data for rich snippets
-
-## Core Pages
-
-### index.html
-Main landing page with sections:
-- Navigation with language toggle
-- Hero section with statistics
-- ANVISA compliance banner
-- Service offerings
-- Track record / proof section
-- Leadership team
-- Global markets overview
-- Contact form
-
-### blog.html
-Blog listing page showcasing 17 articles across categories:
-- Cultivation strategies
-- Extraction & manufacturing
-- Regulatory compliance
-- Commercial deals
-- Historical perspectives
-- How-to guides
-
-### thank-you.html
-Confirmation page displayed after contact form submission with phone contact info.
-
-## Technical Details
-
-### Styling
-- CSS custom properties for theming (colors, fonts, transitions)
-- Flexbox and CSS Grid for layouts
-- Responsive design with mobile-first approach
-- Animation classes for scroll-triggered effects
-
-### JavaScript
-- DOM manipulation for nav interactions
-- IntersectionObserver for efficient scroll animations
-- Event delegation for dropdown menus
-- Smooth scroll utility with fixed nav offset handling
-
-### Internationalization
-- English as default language
-- Portuguese-Brazilian translations in i18n.js
-- Language toggle button in top-right corner
-- Translations applied via data-i18n attributes
-- Original content cached on page load for performance
-
-## Development
-
-### Local Setup
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd hammercg-site
-
-# Serve locally (using any static server)
-# Python 3:
-python -m http.server 8000
-
-# Or using Node.js http-server:
-npx http-server
+python3 -m http.server 8000
 ```
 
-### Deployment
-The site is deployed on Vercel. Push changes to the main branch to trigger automatic deployments.
+Then open [http://localhost:8000](http://localhost:8000).
 
-### Adding Blog Posts
-1. Create a new HTML file in the `blog/` directory following the naming convention
-2. Use the existing blog post structure as a template
-3. Add the article to the blog grid in `blog.html`
-4. Update translations in `i18n.js` if needed
+## Portfolio Context
 
-### Adding Service Pages
-1. Create a new HTML file in the `services/` directory
-2. Update navigation links in `index.html` and `blog.html` if adding a new service type
-3. Link from the services section on the landing page
+HammerCG is not part of the AI builder story directly. It is useful context for my operating background: complex regulated markets, manufacturing, compliance, international business, and real-world commercial execution.
 
-## Performance Notes
+---
 
-- Google Fonts loaded with `font-display=swap` for web font optimization
-- External links with `target="_blank"` include `rel="noopener noreferrer"` for security
-- IntersectionObserver used instead of scroll event listeners for better performance
-- Responsive images and lazy loading ready for implementation
+Built by **Christopher L. Hammer**.
 
-## Browser Support
+- AI portfolio: [christopherhammer.dev](https://christopherhammer.dev)
+- Consulting site: [hammercg.com](https://hammercg.com)
+- GitHub: [christopherlhammer11-ai](https://github.com/christopherlhammer11-ai)
 
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- CSS Grid and Flexbox required
-- ES6 JavaScript features used
-
-## Contact
-
-For consulting inquiries, use the contact form on the landing page or call +1 (415) 941-1283.
-
-## License
-
-All content and code copyright 2026 Hammer Consulting Group. All rights reserved.
